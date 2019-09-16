@@ -3,6 +3,10 @@
   publish = "build"
   base = "/"
 
+[context.production.environment]
+  API_KEY = "AIzaSyAOgvVGGvDAMp_7O4FnZk86hgOuqw80e1c"
+
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
