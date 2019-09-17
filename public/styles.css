@@ -1,0 +1,69 @@
+:root {
+  --baseColor: #e6008e;
+  --accentColor: ;
+}
+body {
+  color: whitesmoke;
+}
+nav {
+  background: var(--baseColor);
+}
+
+nav h3 {
+  color: white;
+}
+
+.Form {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  letter-spacing: 1.5px;
+  word-spacing: 2px;
+  margin-top: 3em;
+  padding: 0.3em 0;
+  background-color: rgb(13, 17, 27);
+}
+
+textarea {
+  resize: none;
+}
+
+/* .Form {
+  width: 40%;
+}
+.btn {
+  margin: 1rem auto;
+  width: 30%;
+} */
+
+.btn {
+  margin: 1rem auto;
+  width: 30%;
+}
+
+footer a,
+footer a:active footer a:visited {
+  color: white;
+  padding: 0 0.4rem 0 0.4rem;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* @media only screen and (min-width: 768px) {
+  .Body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Body textarea {
+    height: 30rem;
+    width: 25rem;
+  }
+} */

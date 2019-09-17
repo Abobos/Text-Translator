@@ -34,7 +34,7 @@ const config = {
     },
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new HtmlWebpackPlugin({ template: './public/index.html' }),
     new Dotenv({
       systemvars: true,
     }),

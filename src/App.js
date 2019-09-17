@@ -1,10 +1,17 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
+
+import Main from './containers/Main.jsx';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+import '../public/styles.css';
 
 const App = () => {
-  return <h1>Welcome</h1>;
+  return (
+    <React.Fragment>
+      <Main />
+    </React.Fragment>
+  );
 };
 
 export default hot(App);
