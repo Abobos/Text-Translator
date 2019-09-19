@@ -5,13 +5,15 @@ const Form = ({ placeholder, defaultOption, disabled }) => (
     <div className="Form mt-3 col-sm-6 ">
       <div className="form-group">
         <select name="languages" className="form-control-sm">
-          <option selected>{defaultOption || 'Select Language'}</option>
+          <option value={defaultOption || 'Select Language'}>
+            {defaultOption || 'Select Language'}
+          </option>
         </select>
         <div className="form-group mt-3">
           <textarea
             className="form-control"
             placeholder={placeholder}
-            rows="15"
+            rows="8"
             disabled={disabled || ''}
           ></textarea>
         </div>

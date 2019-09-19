@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => (
   <nav className="navbar">
-    <a className="navbar-brand" href="Javascript:Void(0)">
-      <h3>
-        Text<strong>Translator</strong>
-      </h3>
-    </a>
+    <Link to="/" className="navbar-brand">
+      <i className="fa fa-book" />
+      <strong>TextTranslator</strong>
+    </Link>
     <select className="form-control-sm">
       <option value="en">English</option>
       <option value="fr">French</option>

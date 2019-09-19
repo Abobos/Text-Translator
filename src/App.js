@@ -1,6 +1,9 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
+import store from './store';
 import Main from './containers/Main.jsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,7 +12,13 @@ import '../public/styles.css';
 const App = () => {
   return (
     <React.Fragment>
-      <Main />
+      <Provider store={store}>
+        <Router>
+          <Switch>
+            <Route path="/" component={Main} />
+          </Switch>
+        </Router>
+      </Provider>
     </React.Fragment>
   );
 };

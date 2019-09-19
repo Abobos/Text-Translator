@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Footer = () => (
-  <footer className="">
-    &copy; 2019 Text Translator by Blessing Makaraba
+  <footer>
+    &copy;2019 Text Translator by Blessing Makaraba
     <p>
       <a href="https://facebook.com/blessing.abobo" className="">
         <i className="fa fa-facebook" />

@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import * as actions from '../actions/actionCreators';
 
 import Navbar from '../components/Navbar.jsx';
 import Form from '../components/Form.jsx';
 import Footer from '../components/Footer.jsx';
 
 class Main extends Component {
-  componentDidMount() {}
+  async componentDidMount() {
+    this.props.getLanguages();
+  }
 
   render() {
     return (
@@ -17,7 +22,7 @@ class Main extends Component {
               defaultOption="Detect Language"
               placeholder="Enter Source Text Here"
             />
-            <Form placeholder="Your Free Translation" disabled="true" />
+            <Form placeholder="Your Free Translation" disabled="disabled" />
           </div>
         </div>
         <button type="button" className="btn btn-primary btn-block">
@@ -29,4 +34,9 @@ class Main extends Component {
   }
 }
 
-export default Main;
+const mapStateToProps = state => ({});
+
+export default connect(
+  mapStateToProps,
+  actions
+)(Main);
