@@ -1,3 +1,4 @@
 export const DETECT_LANGUAGE = 'DETECT_LANGUAGE';
 export const GET_LANGUAGES = 'GET_LANGUAGES';
 export const TRANSLATE_TEXT = 'TRANSLATE_TEXT';
+export const ERROR = 'ERROR';

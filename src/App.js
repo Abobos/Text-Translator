@@ -1,6 +1,6 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import store from './store';
@@ -14,9 +14,7 @@ const App = () => {
     <React.Fragment>
       <Provider store={store}>
         <Router>
-          <Switch>
-            <Route path="/" component={Main} />
-          </Switch>
+          <Route path="/" component={Main} />
         </Router>
       </Provider>
     </React.Fragment>

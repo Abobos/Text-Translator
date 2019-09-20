@@ -1,9 +1,9 @@
 import axios from '../config/axios';
-import { GET_LANGUAGES } from './actionType';
+import { GET_LANGUAGES, ERROR } from './actionType';
 
 const { API_KEY } = process.env;
 
-export const getLanguages = async () => {
+export const getLanguages = () => async dispatch => {
   try {
     const response = await axios.get('/languages', {
       params: {
@@ -13,11 +13,14 @@ export const getLanguages = async () => {
       },
     });
     const { languages } = response.data.data;
-    return {
+    dispatch({
       type: GET_LANGUAGES,
-      language: [],
-    };
+      languages,
+    });
   } catch (error) {
-    console.log('error: ', error);
+    dispatch({
+      type: ERROR,
+      error: 'Something went wrong',
+    });
   }
 };

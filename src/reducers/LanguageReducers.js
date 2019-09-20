@@ -1,13 +1,15 @@
 import { GET_LANGUAGES } from '../actions/actionType';
 
 const initialState = {
-  languages: [],
+  supportedLanguages: [],
 };
-
 export const languages = (state = initialState, action) => {
-  switch (action) {
+  switch (action.type) {
     case GET_LANGUAGES:
-      return Object.assign({}, state, { languages: action.languages });
+      return Object.assign(
+        {},
+        { ...state, supportedLanguages: action.languages }
+      );
     default:
       return state;
   }
