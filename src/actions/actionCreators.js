@@ -1,17 +1,22 @@
 import axios from '../config/axios';
+import { GET_LANGUAGES } from './actionType';
 
 const { API_KEY } = process.env;
 
 export const getLanguages = async () => {
   try {
-    const response = await axios.get('/language/translate/v2/detect', {
+    const response = await axios.get('/languages', {
       params: {
         key: API_KEY,
-        q: 'sfjaskj',
+        target: 'en',
+        model: 'base',
       },
     });
-    console.log(response);
-    return response;
+    const { languages } = response.data.data;
+    return {
+      type: GET_LANGUAGES,
+      language: [],
+    };
   } catch (error) {
     console.log('error: ', error);
   }

@@ -1,20 +1,14 @@
-import {
-  DETECT_LANGUAGE,
-  GET_LANGUAGES,
-  TRANSLATE_TEXT,
-} from '../actions/actionType';
+import { GET_LANGUAGES } from '../actions/actionType';
 
 const initialState = {
-  text: {},
+  languages: [],
 };
 
-const LanguageReducers = (state = initialState, action) => {
+export const languages = (state = initialState, action) => {
   switch (action) {
     case GET_LANGUAGES:
-      return Object.assign({}, state, { text: action.text });
+      return Object.assign({}, state, { languages: action.languages });
     default:
       return state;
   }
 };
-
-export default LanguageReducers;

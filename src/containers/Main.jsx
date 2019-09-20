@@ -34,7 +34,9 @@ class Main extends Component {
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+  languages: state.languages,
+});
 
 export default connect(
   mapStateToProps,
