@@ -2,6 +2,7 @@ require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const config = {
   entry: ['@babel/polyfill', './src/index.js'],
@@ -38,6 +39,7 @@ const config = {
     new Dotenv({
       systemvars: true,
     }),
+    new FaviconsWebpackPlugin('./public/icon.png'),
   ],
   devServer: {
     contentBase: './build',

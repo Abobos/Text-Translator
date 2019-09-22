@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const Form = ({
   placeholder,
@@ -7,6 +8,7 @@ const Form = ({
   languages,
   textArea,
   textAreaName,
+  translatedText,
   name,
   handleChange,
 }) => (
@@ -32,12 +34,12 @@ const Form = ({
         <div className="form-group mt-3">
           <textarea
             name={textAreaName}
-            value={textArea}
+            value={translatedText || textArea}
             onChange={handleChange}
             className="form-control"
             placeholder={placeholder}
             rows="8"
-            disabled={disabled || ''}
+            disabled={disabled}
           ></textarea>
         </div>
       </div>
@@ -45,4 +47,11 @@ const Form = ({
   </React.Fragment>
 );
 
-export default Form;
+const mapStateToProps = ({ languages }) => ({
+  languages: languages.supportedLanguages,
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(Form);

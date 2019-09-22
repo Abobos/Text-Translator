@@ -14,7 +14,7 @@ const App = () => {
     <React.Fragment>
       <Provider store={store}>
         <Router>
-          <Route path="/" component={Main} />
+            <Route path="/" component={Main} />
         </Router>
       </Provider>
     </React.Fragment>

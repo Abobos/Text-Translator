@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3f195712-13b6-4edb-826b-47060ef92a03/deploy-status)](https://app.netlify.com/sites/text-translators/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4a616a23-df4a-43e3-a334-f30d9efcaa78/deploy-status)](https://app.netlify.com/sites/eloquent-panini-41308f/deploys)
 
 # Text Translator
 

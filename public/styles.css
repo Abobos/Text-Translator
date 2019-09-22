@@ -21,6 +21,7 @@ nav h3 {
 }
 
 textarea {
+  overflow: auto;
   resize: none;
 }
 
