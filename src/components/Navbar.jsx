@@ -9,8 +9,6 @@ const Navbar = () => (
     </Link>
     <select className="form-control-sm">
       <option value="en">English</option>
-      <option value="fr">French</option>
-      <option value="es">Espanol</option>
     </select>
   </nav>
 );

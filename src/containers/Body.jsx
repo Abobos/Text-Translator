@@ -36,10 +36,19 @@ class Body extends Component {
     this.props.translateText(text, sourceLanguageCode, targetLanguageCode);
   };
   render() {
-    const { translatedText } = this.props;
+    const { translatedText, errorMessage } = this.props;
     return (
       <React.Fragment>
         <div className="container">
+          <p
+            style={{
+              textAlign: 'center',
+              color: 'red',
+              marginTop: '1.2em',
+            }}
+          >
+            {errorMessage}
+          </p>
           <div className="row">
             <Form
               name="sourceLanguageCode"
@@ -74,9 +83,14 @@ class Body extends Component {
   }
 }
 
-const mapStateToProps = ({ languages: { translatedText }, loading }) => ({
+const mapStateToProps = ({
+  languages: { translatedText },
+  loading,
+  error,
+}) => ({
   loading,
   translatedText,
+  errorMessage: error,
 });
 
 export default connect(
